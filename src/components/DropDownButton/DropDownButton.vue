@@ -45,7 +45,13 @@ props: {
         required: true,
     }
 },
-  
+data() {
+        return {
+            classNameSvg: 'clicker',
+            nameSvg: '#dots',
+        }
+    },
+
 
    methods: {
     openMenu(){
