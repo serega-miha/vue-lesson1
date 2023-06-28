@@ -49,6 +49,7 @@ data() {
         return {
             classNameSvg: 'clicker',
             nameSvg: '#dots',
+            menuVisible: false,
         }
     },
 
