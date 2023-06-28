@@ -1,0 +1,30 @@
+
+@import '@/sass/color.scss';
+@import '../Button/style.scss';
+
+
+
+
+/* main styles */
+
+.menu {
+    background-color: $bg-primaryDefault;
+    height: 90px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0px 20px;
+    
+
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 24px;
+    gap: 24px;
+
+    list-style: none;
+}

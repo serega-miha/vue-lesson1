@@ -1,0 +1,129 @@
+ <template>
+        <button :class="className" :id="id">{{ text }}</button>
+ </template>
+
+   <script>
+ 
+   export default {
+   props: {
+        text: {
+            type: String,
+            default: 'Button!',
+            required: true,
+        },
+        className: {
+            type: String,
+            default: 'button',
+            required: true,
+        },
+        id: {
+            type: String,
+            required: true,
+        }
+    },
+      
+   }
+   </script>
+ 
+   <style lang="scss">
+      @import '@/sass/color.scss';
+
+.btns{
+    padding: 20px;
+}
+
+.button{
+    font-family: inherit;
+    padding: 0px 16px;
+    min-height: 42px;
+    border-radius: 4px;
+    background-color: $bg-primaryDefault;
+  
+    color: $font-secondary;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    
+}
+.button-cancel{
+    background-color:$bg-secondary;
+    color: $font-primaryDefault;
+    border: 1px solid $font-primaryDefault;
+}
+
+.button-disable{
+    background-color:$bg-disabled;
+    color: $font-primaryDefault;
+   
+}
+
+.button-nav {
+    border: 1px solid $font-secondary;
+   
+}
+
+.button-nav:hover {
+    background-color: $font-secondary;
+    color: $font-primaryDefault;
+}
+
+.button-nav.active{
+    background-color: $font-secondary;
+    color: $font-primaryDefault;
+}
+
+
+.button-addittionaly{
+    cursor:pointer;
+    width: 42px;
+    height: 42px;
+    display: block;
+    
+    svg{
+        width: 4px;
+        height: 13px;
+        padding: 14.5px 19.5px;
+        border: 1px solid $border-default;
+        border-radius: 4px;
+        background-color: $bg-secondary;
+        &:hover{
+            background-color: $bg-secondaryActive;
+            border: 1px solid $border-hover;
+        }
+        &._active{
+            background-color: $bg-secondaryActive;
+            border: 1px solid $border-hover;
+        }
+    }
+}
+
+
+.button-user{
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    
+    &:hover{
+        border: 1px solid $font-secondary;
+    }
+
+    svg{
+        width: 13px;
+        height: 8px;
+        fill: $font-secondary;
+        transition: all 0.2s;
+        
+    }
+    &._active{
+        background-color: $bg-secondary;
+        transition: all 0.2s;
+        svg{
+            fill:$bg-secondaryHover;
+            transform: rotate(180deg);
+            transition: all 0.2s;
+        }
+    }
+}
+
+   </style>
